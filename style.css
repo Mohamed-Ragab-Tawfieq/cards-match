@@ -1,0 +1,235 @@
+body{
+    font-family: serif;
+}
+.row {
+    margin: 0;
+}
+.fa-star-o, .fa-flag-checkered, .fa-trophy{
+    color: grey;
+}
+#images {
+    width: 550px;
+    height: 500px;
+    max-width: 100%;
+    min-height: 300px;
+    background: #ffc107;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0px 2px 5px #000;
+}
+#images #content {
+    max-width: 100%;
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+#images #content img {
+    width: 110px;
+    height: 100%;
+    z-index: 991;
+}
+.main-card {
+    display: inline-block;
+    margin: 5px;
+    background-color: transparent;
+    width: 110px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.inner-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.front-card, .back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #9c27b0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+.back-card {
+    transform: rotateY(180deg);
+}
+#options {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    min-width: 150px;
+    min-height: 150px;
+    color: #333;
+    border: 3px dashed #6a8a58;
+}
+@media only screen and (max-width: 768px) {
+    #images{
+        margin-top: 0;
+        height: 380px;
+    }
+    .main-card, #images #content img{
+        height: 70px;
+        width: 70px;
+    }
+    #options {
+        position: relative;
+        top: 20px;
+        width: 50%;
+        margin: -20px 28% 20px;
+    }
+    #options p {
+        margin: 0;
+    }
+    #eyebtn {
+        position: absolute;
+        top: 10px;
+        right: 110px;
+    }
+    #lightning {
+        position: absolute;
+        top: 10px;
+        right: 160px;
+    }
+    .time-box {
+        margin-left: -1% !important;
+        margin-top: 0px !important;
+    }
+    .fire{
+        width: 50px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #images{
+        width: 70%;
+        float: left;
+    }
+    #eyebtn {
+        position: absolute;
+        top: 10px;
+        right: 110px;
+    }
+    #lightning {
+        position: absolute;
+        top: 10px;
+        right: 160px;
+    }
+    #options {
+        position: relative;
+        top: 0;
+        float: right;
+        width: 20%;
+        margin-right: -20px !important;
+    }
+    .time-box {
+        margin-left: -1% !important;
+        margin-top: 0px !important;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .main-card, #images #content img{
+        width: 70px;
+        height: 70px;
+    } 
+}
+  
+#eyebtn, #lightning {
+    visibility: hidden;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid rgb(255, 193, 7);
+    outline: 1px solid rgb(255, 193, 7);
+    color: rgb(156, 39, 176);
+}
+#congrat {
+    display: none;
+    z-index: 993;
+    width: 325px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#over { 
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 992;
+}
+#gameover {
+    display: none;
+    background: #fff;
+    z-index: 993;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 30px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  
+}
+.gameOverImg {
+    max-height: 70%;
+}
+
+#gameover button{
+    font-size: 50px;
+    z-index: 994;
+}
+.row .time-box, #imgLength {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.time-box{
+    background: #fff;
+    border-radius: 10px;
+    color: rgb(255, 193, 7);
+    text-shadow: 1px 0px 2px #333;
+}
+#imgLength {
+    display: none;
+}
+.fire-main {
+    display: none;
+    visibility: hidden;
+}
+.fire-go {
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 998;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
+}

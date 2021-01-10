@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Matching</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- time -->
+    <div class="row">
+        <div class="mx-auto mt-2 time-box">
+            <img src="images/timer.png" alt="" width="50" height="50">
+            <span id="time">60</span>
+        </div>
+        <div id="imgLength"></div>
+    </div>
+
+    <!-- game main -->
+    <div class="container text-center">
+        <div id="images" class="mx-auto text-center">
+            <div id="content" class="mx-auto">
+            </div>
+        </div>
+        <!-- eye and lightning buttons -->
+        <button id="lightning" onclick="lightning()"><span class="fa fa-bolt"></span></button>
+        <button id="eyebtn" onclick="eyeEffect ()"><span class="fa fa-eye"></span></button>
+        <!-- options section-->
+        <div id="options" class="ml-md-auto mt-md-5 mr-md-5">
+            <p id="trophy">
+                <span class="fa fa-trophy fa-3x fa-w"></span>
+            </p>
+            <p id="flag">
+                <img src="images/medal.png" id="medal" width="40" height="48" class="my-1">
+            </p>
+            <p id="levelThree">
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+            </p>
+            <p id="levelTwo">
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+            </p>
+            <p id="levelOne">
+                <span class="fa fa-star-o fa-2x fa-w"></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- congatulations and gameover -->
+    <div class="row text-center">
+        <img src="images/congrat.png" alt="Congrats" id="congrat" class="img-fluid">
+        <div id="gameover" class="mx-auto w-75 pt-4">
+            <button onclick="startGame()" class="d-block mx-auto px-5 btn btn-info"><span class="fa fa-repeat"></span></button>
+            <img src="images/gameover.png" alt="game over" class="img-fluid gameOverImg">
+        </div>
+    </div>
+    <!-- final win effect -->
+    <div class="row text-center fire-main">
+        <img src="images/fire.png" alt="" class="img-fluid fire">
+        <img src="images/fire.png" alt="" class="img-fluid fire">
+    </div>
+    <!-- over after win or lose -->
+    <div id="over"></div>
+    <audio src="sounds/match.m4a" id="match-audio"></audio>
+    <audio src="sounds/congrats.m4a" id="congrats-audio"></audio>
+    <audio src="sounds/shoke.mp3" id="shoke-audio"></audio>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
